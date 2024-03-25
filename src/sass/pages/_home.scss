@@ -1,7 +1,7 @@
 #home {
   padding: 40px 0;
   width: 100%;
-  min-height: 326px;
+  height: calc(100vh - 300px);
   display: flex;
   justify-content: center;
   align-items: center;
