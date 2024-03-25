@@ -1,5 +1,5 @@
 .profile {
-  width: 20%;
+  width: 30%;
   .profile-container {
     display: flex;
     flex-direction: column;
@@ -72,6 +72,7 @@
           div {
             text-decoration: none;
             color: $on-background-dark;
+            font-weight: 500;
             span {
               color: $alpha-50-dark;
             }
@@ -87,6 +88,7 @@
           align-items: center;
           gap: 5px;
           color: $on-background-dark;
+          font-weight: 500;
           span {
             color: $alpha-50-dark;
           }

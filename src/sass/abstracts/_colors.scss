@@ -1,3 +1,5 @@
+// $$$ DARK MODE $$$
+
 $background-dark: #141d2e;
 $on-background-dark: hsl(0, 0%, 100%);
 $primary-dark: hsl(212, 100%, 50%);
@@ -26,3 +28,33 @@ $alpha-50-dark: hsla(0, 0%, 100%, 0.5);
 $alpha-10-dark: hsla(0, 0%, 100%, 0.1);
 $alpha-5-dark: hsla(0, 0%, 100%, 0.05);
 $overlay-bg-dark: hsla(220, 40%, 7%, 0.5);
+
+// $$$ LIGHT MODE $$$
+$background-light: hsl(0, 0%, 100%);
+$on-background-light: hsl(220, 40%, 13%);
+$primary-light: hsl(212, 100%, 50%);
+$primary-hover-light: hsl(212, 100%, 45%);
+$primary-outline-light: hsl(212, 100%, 46%);
+$primary-outline-hover-light: hsl(212, 100%, 40%);
+$surface-light: hsl(223, 100%, 96%);
+$on-surface-light: hsl(222, 11%, 40%);
+$on-surface-2-light: hsl(222, 11%, 36%);
+$surface-variant-light: hsl(221, 26%, 89%);
+$surface-variant-hover-light: hsl(221, 26%, 79%);
+$on-surface-variant-light: hsl(223, 14%, 35%);
+$surface-variant-outline-light: hsl(223, 18%, 85%);
+$surface-variant-outline-hover-light: hsl(223, 18%, 75%);
+$error-light: hsl(0, 54%, 49%);
+$error-alpha-10-light: hsla(0, 54%, 49%, 0.1);
+$outline-light: hsl(223, 10%, 83%);
+$surface-1-light: hsl(223, 100%, 96%);
+$surface-1-hover-light: hsl(223, 100%, 90%);
+$surface-1-outline-light: hsl(223, 49%, 92%);
+$surface-1-outline-hover-light: hsl(223, 49%, 82%);
+$alpha-80-light: hsla(0, 0%, 0%, 0.8);
+$alpha-70-light: hsla(0, 0%, 0%, 0.7);
+$alpha-60-light: hsla(0, 0%, 0%, 0.6);
+$alpha-50-light: hsla(0, 0%, 0%, 0.5);
+$alpha-10-light: hsla(0, 0%, 0%, 0.1);
+$alpha-5-light: hsla(0, 0%, 0%, 0.05);
+$overlay-bg-light: hsla(220, 8%, 56%, 0.5);

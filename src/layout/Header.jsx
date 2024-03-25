@@ -1,12 +1,20 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function Header({ setUser }) {
   const [value, setValue] = useState("");
-
+  const [theme, setTheme] = useState(false);
   const findUser = () => {
     setUser(value);
     setValue("");
   };
+
+  useEffect(() => {
+    if (theme) {
+      document.body.classList.add("light__mode");
+    } else {
+      document.body.classList.remove("light__mode");
+    }
+  }, [theme]);
 
   return (
     <header>
@@ -26,7 +34,7 @@ function Header({ setUser }) {
             />
             <button onClick={findUser}>Search</button>
           </div>
-          <button className="night__mode">
+          <button onClick={() => setTheme(!theme)} className="night__mode">
             <i className="ri-sun-line"></i>
           </button>
         </div>

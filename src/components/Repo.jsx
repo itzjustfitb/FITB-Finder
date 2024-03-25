@@ -18,28 +18,30 @@ function Repo({ data }) {
   return (
     <div className="repo">
       <div className="repo__top">
-        <Link target="_blank" to={data.html_url}>
-          <h1>{data.name}</h1>
-        </Link>
-        {days <= 7 ? (
-          <p>
-            Updated {days} {days === 1 ? "day" : "days"} ago
-          </p>
-        ) : days <= 28 ? (
-          <p>
-            Updated {weeks} {weeks === 1 ? "week" : "weeks"} ago
-          </p>
-        ) : days >= 365 ? (
-          <p>
-            Updated {years} {years === 1 ? "year" : "years"} ago
-          </p>
-        ) : days >= 30 ? (
-          <p>
-            Updated {months} {months === 1 ? "month" : "months"} ago
-          </p>
-        ) : (
-          ""
-        )}
+        <div className="repo__top-left">
+          <Link target="_blank" to={data.html_url}>
+            <h1>{data.name}</h1>
+          </Link>
+          {days <= 7 ? (
+            <p>
+              Updated {days} {days === 1 ? "day" : "days"} ago
+            </p>
+          ) : days <= 28 ? (
+            <p>
+              Updated {weeks} {weeks === 1 ? "week" : "weeks"} ago
+            </p>
+          ) : days >= 365 ? (
+            <p>
+              Updated {years} {years === 1 ? "year" : "years"} ago
+            </p>
+          ) : days >= 30 ? (
+            <p>
+              Updated {months} {months === 1 ? "month" : "months"} ago
+            </p>
+          ) : (
+            ""
+          )}
+        </div>
 
         <span>{data.visibility}</span>
       </div>

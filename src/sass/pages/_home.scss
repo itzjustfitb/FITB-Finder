@@ -15,6 +15,7 @@
       flex-direction: column;
       gap: 10px;
       .home__datas {
+        min-height: calc(100vh - 370px);
         position: relative;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -159,7 +160,7 @@
         }
         .home__datas {
           display: grid;
-          grid-template-columns: 1fr;
+          grid-template-columns: 100%;
           gap: 10px;
         }
       }
