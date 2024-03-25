@@ -1,0 +1,17 @@
+.error__message {
+  width: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 0;
+  h1 {
+    font-size: 4rem;
+    color: $alpha-10-dark;
+  }
+  p {
+    color: $alpha-50-dark;
+  }
+}

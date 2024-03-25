@@ -1,0 +1,256 @@
+#home {
+  padding: 40px 0;
+  width: 100%;
+  min-height: 326px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .home__container {
+    width: 90%;
+    display: flex;
+    gap: 50px;
+    .home__right {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      .home__datas {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        .error__message {
+          position: absolute;
+          height: initial;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #home {
+    padding: 40px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .home__container {
+      width: 90%;
+      display: flex;
+      gap: 50px;
+      .home__right {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .home__datas {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 10px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1000px) {
+  #home {
+    padding: 40px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .home__container {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      .profile {
+        width: 100%;
+        .profile-container {
+          position: relative;
+          .profile__top {
+            flex-direction: row;
+            gap: 20px;
+            img {
+              width: 100px;
+            }
+            .profile__title {
+              justify-content: center;
+              h1 {
+                font-size: 2rem;
+              }
+              p {
+                font-size: 1.3rem;
+              }
+            }
+          }
+        }
+      }
+      .home__right {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .home__datas {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 10px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 650px) {
+  #home {
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .home__container {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .profile {
+        width: 100%;
+        .profile-container {
+          position: relative;
+          .profile__top {
+            flex-direction: row;
+            gap: 20px;
+            img {
+              width: 100px;
+            }
+            .profile__title {
+              justify-content: center;
+              h1 {
+                font-size: 2rem;
+              }
+              p {
+                font-size: 1.3rem;
+              }
+            }
+          }
+        }
+      }
+      .home__right {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        nav {
+          height: 80px;
+          ul {
+            li {
+              a {
+                height: 80px;
+                flex-direction: column-reverse;
+                p {
+                  font-size: 0.8rem;
+                }
+                span {
+                  font-size: 0.8rem;
+                }
+              }
+            }
+          }
+        }
+        .home__datas {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 10px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  #home {
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .home__container {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .profile {
+        width: 100%;
+        .profile-container {
+          position: relative;
+          .profile__top {
+            flex-direction: row;
+            gap: 20px;
+            img {
+              width: 100px;
+            }
+            .profile__title {
+              justify-content: center;
+              gap: 5px;
+              h1 {
+                font-size: 1.4rem;
+              }
+              p {
+                font-size: 0.9rem;
+              }
+            }
+          }
+        }
+      }
+      .home__right {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        nav {
+          height: 70px;
+          ul {
+            li {
+              a {
+                height: 70px;
+                flex-direction: column-reverse;
+                p {
+                  font-size: 0.6rem;
+                }
+                span {
+                  font-size: 0.6rem;
+                }
+              }
+            }
+          }
+        }
+        .home__datas {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 10px;
+          .repo {
+            .repo__top {
+              a {
+                h1 {
+                  font-size: 1rem;
+                }
+              }
+              p {
+                font-size: 0.8rem;
+              }
+            }
+            .repo__bottom {
+              .repo__icon {
+                i {
+                  font-size: 0.8rem;
+                }
+                p {
+                  font-size: 0.8rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

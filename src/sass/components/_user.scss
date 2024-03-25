@@ -1,0 +1,37 @@
+@import "../abstracts/colors";
+
+.user {
+  background-color: $surface-1-dark;
+  border-radius: 16px;
+  .user__container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding-left: 30px;
+    padding: 20px;
+    position: relative;
+    img {
+      border-radius: 50%;
+      width: 70px;
+    }
+    h1 {
+      color: $on-background-dark;
+    }
+    a {
+      text-decoration: none;
+      background-color: $surface-variant-dark;
+      padding: 10px;
+      border-radius: 50%;
+      color: $alpha-50-dark;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 30px;
+      font-size: 1.7rem;
+      position: absolute;
+      transition: 0.4s;
+      &:hover {
+        background-color: $surface-variant-hover-dark;
+      }
+    }
+  }
+}

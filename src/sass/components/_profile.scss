@@ -1,0 +1,97 @@
+.profile {
+  width: 20%;
+  .profile-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .profile__top {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      img {
+        width: 100%;
+        border-radius: 50%;
+        border: 2px dashed $primary-dark;
+      }
+      .profile__title {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        h1 {
+          color: $on-background-dark;
+          font-weight: 500;
+        }
+        p {
+          color: $primary-dark;
+          color: $primary-outline-dark;
+        }
+      }
+    }
+
+    .profile__content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      > a {
+        text-decoration: none;
+        display: flex;
+        height: 40px;
+        background-color: $surface-1-dark;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        transition: 0.4s;
+        p,
+        i {
+          transition: 0.4s;
+          color: $alpha-50-dark;
+        }
+        &:hover {
+          background-color: $surface-1-hover-dark;
+          p,
+          i {
+            color: $primary-dark;
+          }
+        }
+      }
+      .profile__socials {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        .social__item {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          height: 30px;
+          i {
+            font-size: 1.2rem;
+            color: $on-background-dark;
+          }
+          div {
+            text-decoration: none;
+            color: $on-background-dark;
+            span {
+              color: $alpha-50-dark;
+            }
+          }
+        }
+      }
+      .profile__infos {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        p {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          color: $on-background-dark;
+          span {
+            color: $alpha-50-dark;
+          }
+        }
+      }
+    }
+  }
+}
