@@ -299,10 +299,10 @@ body {
 #home {
   padding: 40px 0;
   width: 100%;
-  height: calc(100vh - 300px);
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: calc(100vh - 370px);
 }
 #home .home__container {
   width: 90%;

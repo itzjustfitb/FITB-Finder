@@ -1,28 +1,59 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Navigation from "../components/Navigation";
 import Profile from "../components/Profile";
 import Repo from "../components/Repo";
 import User from "../components/User";
 import ErrorMessage from "../components/ErrorComponent";
 import { Skeleton } from "@mui/material";
-import SkeletonColor from "../components/Skeleton";
 
-function HomePage({ access, profile, repos, following, followers, starred }) {
+function HomePage({
+  isLoading,
+  access,
+  profile,
+  repos,
+  following,
+  followers,
+  starred,
+}) {
   const [active, setActive] = useState("Repositories");
-  const [isloading, setIsLoading] = useState(false);
-  useEffect(() => {
-    setIsLoading(true);
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
-  }, [repos, followers, followers, starred]);
+
+  console.log(isLoading);
 
   return (
     <main id="home">
       <div className="home__container">
         {access ? (
           <>
-            <Profile data={profile} />
+            {!isLoading ? (
+              <Profile data={profile} />
+            ) : (
+              <>
+                <div className="profile">
+                  <Skeleton
+                    sx={{ bgcolor: "#1a263d" }}
+                    variant="circular"
+                    width={100}
+                    height={100}
+                  />
+                  <Skeleton
+                    sx={{ bgcolor: "#1a263d", fontSize: "2rem" }}
+                    variant="text"
+                  />
+                  <Skeleton
+                    sx={{ bgcolor: "#1a263d" }}
+                    variant="rectangular"
+                    width={"100%"}
+                    height={60}
+                  />
+                  <Skeleton
+                    sx={{ bgcolor: "#1a263d" }}
+                    variant="rounded"
+                    width={"100%"}
+                    height={240}
+                  />
+                </div>
+              </>
+            )}
             <div className="home__right">
               <Navigation
                 repos={repos}
@@ -34,32 +65,196 @@ function HomePage({ access, profile, repos, following, followers, starred }) {
               />
               <div className="home__datas">
                 {active === "Repositories" ? (
-                  isloading ? (
+                  !isLoading ? (
                     repos.length ? (
                       repos.map((repo) => <Repo data={repo} key={repo.id} />)
                     ) : (
                       <ErrorMessage tab={"repositories"} type={""} />
                     )
                   ) : (
-                    <SkeletonColor />
+                    <>
+                      <Skeleton
+                        sx={{ bgcolor: "#1a263d" }}
+                        variant="rectangular"
+                        width={"100%"}
+                        height={118}
+                      />
+                      <Skeleton
+                        sx={{ bgcolor: "#1a263d" }}
+                        variant="rectangular"
+                        width={"100%"}
+                        height={118}
+                      />
+                      <Skeleton
+                        sx={{ bgcolor: "#1a263d" }}
+                        variant="rectangular"
+                        width={"100%"}
+                        height={118}
+                      />
+                      <Skeleton
+                        sx={{ bgcolor: "#1a263d" }}
+                        variant="rectangular"
+                        width={"100%"}
+                        height={118}
+                      />
+                      <Skeleton
+                        sx={{ bgcolor: "#1a263d" }}
+                        variant="rectangular"
+                        width={"100%"}
+                        height={118}
+                      />
+                      <Skeleton
+                        sx={{ bgcolor: "#1a263d" }}
+                        variant="rectangular"
+                        width={"100%"}
+                        height={118}
+                      />
+                    </>
                   )
                 ) : active === "Starred" ? (
-                  starred.length ? (
-                    starred.map((repo) => <Repo key={repo.id} data={repo} />)
+                  !isLoading ? (
+                    starred.length ? (
+                      starred.map((repo) => <Repo key={repo.id} data={repo} />)
+                    ) : (
+                      <ErrorMessage tab={"starred"} type={"repositories"} />
+                    )
                   ) : (
-                    <ErrorMessage tab={"starred"} type={"repositories"} />
+                    <>
+                      <Skeleton
+                        sx={{ bgcolor: "#1a263d" }}
+                        variant="rectangular"
+                        width={"100%"}
+                        height={118}
+                      />
+                      <Skeleton
+                        sx={{ bgcolor: "#1a263d" }}
+                        variant="rectangular"
+                        width={"100%"}
+                        height={118}
+                      />
+                      <Skeleton
+                        sx={{ bgcolor: "#1a263d" }}
+                        variant="rectangular"
+                        width={"100%"}
+                        height={118}
+                      />
+                      <Skeleton
+                        sx={{ bgcolor: "#1a263d" }}
+                        variant="rectangular"
+                        width={"100%"}
+                        height={118}
+                      />
+                      <Skeleton
+                        sx={{ bgcolor: "#1a263d" }}
+                        variant="rectangular"
+                        width={"100%"}
+                        height={118}
+                      />
+                      <Skeleton
+                        sx={{ bgcolor: "#1a263d" }}
+                        variant="rectangular"
+                        width={"100%"}
+                        height={118}
+                      />
+                    </>
                   )
                 ) : active === "Following" ? (
-                  following.length ? (
-                    following.map((user) => <User key={user.id} data={user} />)
+                  !isLoading ? (
+                    following.length ? (
+                      following.map((user) => (
+                        <User key={user.id} data={user} />
+                      ))
+                    ) : (
+                      <ErrorMessage tab={"followings"} type={""} />
+                    )
                   ) : (
-                    <ErrorMessage tab={"followings"} type={""} />
+                    <>
+                      <Skeleton
+                        sx={{ bgcolor: "#1a263d" }}
+                        variant="rectangular"
+                        width={"100%"}
+                        height={118}
+                      />
+                      <Skeleton
+                        sx={{ bgcolor: "#1a263d" }}
+                        variant="rectangular"
+                        width={"100%"}
+                        height={118}
+                      />
+                      <Skeleton
+                        sx={{ bgcolor: "#1a263d" }}
+                        variant="rectangular"
+                        width={"100%"}
+                        height={118}
+                      />
+                      <Skeleton
+                        sx={{ bgcolor: "#1a263d" }}
+                        variant="rectangular"
+                        width={"100%"}
+                        height={118}
+                      />
+                      <Skeleton
+                        sx={{ bgcolor: "#1a263d" }}
+                        variant="rectangular"
+                        width={"100%"}
+                        height={118}
+                      />
+                      <Skeleton
+                        sx={{ bgcolor: "#1a263d" }}
+                        variant="rectangular"
+                        width={"100%"}
+                        height={118}
+                      />
+                    </>
                   )
                 ) : active === "Followers" ? (
-                  followers.length ? (
-                    followers.map((user) => <User data={user} key={user.id} />)
+                  !isLoading ? (
+                    followers.length ? (
+                      followers.map((user) => (
+                        <User data={user} key={user.id} />
+                      ))
+                    ) : (
+                      <ErrorMessage tab={"followers"} type={""} />
+                    )
                   ) : (
-                    <ErrorMessage tab={"followers"} type={""} />
+                    <>
+                      <Skeleton
+                        sx={{ bgcolor: "#1a263d" }}
+                        variant="rectangular"
+                        width={"100%"}
+                        height={118}
+                      />
+                      <Skeleton
+                        sx={{ bgcolor: "#1a263d" }}
+                        variant="rectangular"
+                        width={"100%"}
+                        height={118}
+                      />
+                      <Skeleton
+                        sx={{ bgcolor: "#1a263d" }}
+                        variant="rectangular"
+                        width={"100%"}
+                        height={118}
+                      />
+                      <Skeleton
+                        sx={{ bgcolor: "#1a263d" }}
+                        variant="rectangular"
+                        width={"100%"}
+                        height={118}
+                      />
+                      <Skeleton
+                        sx={{ bgcolor: "#1a263d" }}
+                        variant="rectangular"
+                        width={"100%"}
+                        height={118}
+                      />
+                      <Skeleton
+                        sx={{ bgcolor: "#1a263d" }}
+                        variant="rectangular"
+                        width={"100%"}
+                        height={118}
+                      />
+                    </>
                   )
                 ) : (
                   ""

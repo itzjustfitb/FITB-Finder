@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import axios from "axios";
-import SkeletonColor from "./components/Skeleton";
 
 function App() {
   const [user, setUser] = useState("itzjustfitb");
@@ -16,6 +15,7 @@ function App() {
   const [following, setFollowing] = useState([]);
   const [followers, setFollowers] = useState([]);
   const [starred, setStarred] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   const url = `https://api.github.com/users/${user}`;
 
@@ -32,6 +32,7 @@ function App() {
       setFollowing(followingRes.data);
       setStarred(starredRes.data);
       setAccess(true);
+      setIsLoading(false);
     } catch (error) {
       setAccess(false);
       if (error.response && error.response.status === 403) {
@@ -43,7 +44,10 @@ function App() {
   };
 
   useEffect(() => {
-    fetchData();
+    setIsLoading(true);
+    setTimeout(() => {
+      fetchData();
+    }, 1000);
   }, [user]);
 
   return (
@@ -54,6 +58,7 @@ function App() {
           path="/"
           element={
             <HomePage
+              isLoading={isLoading}
               access={access}
               profile={profile}
               repos={repos}
