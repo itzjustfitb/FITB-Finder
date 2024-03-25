@@ -1,14 +1,22 @@
 import { useEffect, useState } from "react";
 
 function Header({ setUser }) {
+  const getTheme = () => {
+    return JSON.parse(localStorage.getItem("theme")) || false;
+  };
   const [value, setValue] = useState("");
-  const [theme, setTheme] = useState(true);
+  const [theme, setTheme] = useState(getTheme());
   const findUser = () => {
     setUser(value);
     setValue("");
   };
 
+  const changeMode = () => {
+    setTheme(!theme);
+  };
+
   useEffect(() => {
+    localStorage.setItem("theme", JSON.stringify(theme));
     if (theme) {
       document.body.classList.add("light__mode");
     } else {
@@ -34,7 +42,7 @@ function Header({ setUser }) {
             />
             <button onClick={findUser}>Search</button>
           </div>
-          <button onClick={() => setTheme(!theme)} className="night__mode">
+          <button onClick={changeMode} className="night__mode">
             <i className="ri-sun-line"></i>
           </button>
         </div>

@@ -48,6 +48,11 @@ header .header__container .header__main .header__search input {
   color: hsl(0, 0%, 100%);
   font-family: "Poppins";
 }
+header .header__container .header__main .header__search input:-webkit-autofill, header .header__container .header__main .header__search input:-webkit-autofill:hover, header .header__container .header__main .header__search input:-webkit-autofill:focus, header .header__container .header__main .header__search input:-webkit-autofill:active {
+  -webkit-transition: background-color 5000s;
+  transition: background-color 5000s;
+  -webkit-text-fill-color: #fff !important;
+}
 header .header__container .header__main .header__search input:focus {
   outline-color: transparent;
   border: none;

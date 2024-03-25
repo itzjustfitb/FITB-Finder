@@ -40,6 +40,13 @@ header {
           background-color: $surface-1-dark;
           color: $on-background-dark;
           font-family: $font-1;
+          &:-webkit-autofill,
+          &:-webkit-autofill:hover,
+          &:-webkit-autofill:focus,
+          &:-webkit-autofill:active {
+            transition: background-color 5000s;
+            -webkit-text-fill-color: #fff !important;
+          }
           &:focus {
             outline-color: transparent;
             border: none;

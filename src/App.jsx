@@ -66,6 +66,8 @@ function App() {
               followers={followers}
               starred={starred}
               user={user}
+              fetchData={fetchData}
+              setIsLoading={setIsLoading}
             />
           }
         />

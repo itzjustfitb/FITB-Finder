@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Navigation from "../components/Navigation";
 import Profile from "../components/Profile";
 import Repo from "../components/Repo";
@@ -16,8 +16,6 @@ function HomePage({
   starred,
 }) {
   const [active, setActive] = useState("Repositories");
-
-  console.log(isLoading);
 
   return (
     <main id="home">
