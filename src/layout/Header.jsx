@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 function Header({ setUser }) {
   const [value, setValue] = useState("");
-  const [theme, setTheme] = useState(false);
+  const [theme, setTheme] = useState(true);
   const findUser = () => {
     setUser(value);
     setValue("");

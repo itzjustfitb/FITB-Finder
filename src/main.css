@@ -1043,3 +1043,15 @@ nav ul .active__row::after {
   font-family: monospace;
   font-size: 1.5rem;
 }
+.light__mode .error__message h1 {
+  color: hsla(0, 0%, 0%, 0.1);
+}
+.light__mode .error__message p {
+  color: hsla(0, 0%, 0%, 0.5);
+}
+.light__mode .MuiSkeleton-root,
+.light__mode .MuiSkeleton-rectangular,
+.light__mode .MuiSkeleton-pulse,
+.light__mode .css-1l6by5j-MuiSkeleton-root {
+  background-color: hsl(223, 10%, 83%) !important;
+}

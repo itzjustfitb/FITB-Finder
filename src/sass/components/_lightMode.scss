@@ -235,4 +235,18 @@
       }
     }
   }
+  .error__message {
+    h1 {
+      color: $alpha-10-light;
+    }
+    p {
+      color: $alpha-50-light;
+    }
+  }
+  .MuiSkeleton-root,
+  .MuiSkeleton-rectangular,
+  .MuiSkeleton-pulse,
+  .css-1l6by5j-MuiSkeleton-root {
+    background-color: $outline-light !important;
+  }
 }
